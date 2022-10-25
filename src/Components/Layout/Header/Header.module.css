@@ -27,3 +27,9 @@
 .logo {
     height: 6rem;
 }
+
+.main-img {
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import HeaderImg from "../../assets/images/imgforHeader.jpg";
-import CartButton from "./CartButton";
+import HeaderImg from "../../../assets/images/imgforHeader.jpg";
+import CartButton from "../Cart/CartButton";
 // import Logo from "../../assets/icons/Logo_As_Icon.png";
 import classes from "./Header.module.css";
 
@@ -18,7 +18,7 @@ const Header = () => {
             </header>
             <div className={classes["main-img"]}>
                 <img
-                    className={classes["main-image-img"]}
+                    className={classes["main-img"]}
                     src={HeaderImg}
                     alt="Delicious food"
                 />
