@@ -4,7 +4,7 @@ import CartButton from "../Cart/CartButton";
 // import Logo from "../../assets/icons/Logo_As_Icon.png";
 import classes from "./Header.module.css";
 
-const Header = () => {
+const Header = (props) => {
     return (
         <Fragment>
             <header className={classes.header}>
@@ -14,7 +14,7 @@ const Header = () => {
                     alt="Restaurant Logo"
                 /> */}
                 <h1>Yummy!</h1>
-                <CartButton />
+                <CartButton onClick={props.onClick} />
             </header>
             <div className={classes["main-img"]}>
                 <img
