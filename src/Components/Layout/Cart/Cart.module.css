@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 1rem 0;
 }
 
@@ -32,5 +32,10 @@
 
 .actions .button {
     background-color: #e41e1e;
+    color: white;
+}
+
+.actions .button:hover {
+    background-color: #e41e1ecb;
     color: white;
 }

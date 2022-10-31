@@ -9,6 +9,7 @@ const MealsForm = (props) => {
     const addItemToCart = (event) => {
         event.preventDefault();
         const amount = document.getElementById(props.id).value;
+
         cartCtx.addItem({ ...props.item, amount });
         console.log(cartCtx);
     };

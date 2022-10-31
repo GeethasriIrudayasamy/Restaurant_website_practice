@@ -13,6 +13,6 @@
     font-weight: bold;
 }
 
-.form button :hover {
-    cursor: pointer;
+.form button:hover {
+    background-color: #e41e1ecb;
 }

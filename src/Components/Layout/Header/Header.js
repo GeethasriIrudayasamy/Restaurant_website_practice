@@ -13,7 +13,7 @@ const Header = (props) => {
                     src={Logo}
                     alt="Restaurant Logo"
                 /> */}
-                <h1>Yummy!</h1>
+                <h1>ReactMeals!</h1>
                 <CartButton onClick={props.onClick} />
             </header>
             <div className={classes["main-img"]}>
