@@ -7,7 +7,6 @@ const CartProvider = (props) => {
     const [totalCost, setTotalCost] = useState(0);
 
     const addItemHandler = (item) => {
-        setTotalCost(cartContext.totalAmount + item.price);
         const itemIndex = items.findIndex((i) => {
             return i.id === item.id;
         });
@@ -16,9 +15,14 @@ const CartProvider = (props) => {
         if (prevItem) {
             updatedItem = {
                 ...prevItem,
-                amount: +prevItem.amount + 1,
+                amount: +prevItem.amount + +item.amount,
             };
             console.log(prevItem.amount);
+
+            setTotalCost(
+                cartContext.totalAmount +
+                    (updatedItem.amount - prevItem.amount) * item.price
+            );
 
             updatedItems = [...items];
             updatedItems[itemIndex] = updatedItem;
@@ -26,6 +30,7 @@ const CartProvider = (props) => {
             return;
         } else {
             setItems([...items, item]);
+            setTotalCost(cartContext.totalAmount + item.amount * item.price);
         }
     };
 
